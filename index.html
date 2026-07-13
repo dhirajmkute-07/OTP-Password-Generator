@@ -1,0 +1,240 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP & Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="theme-btn">
+        🌙
+    </div>
+
+    <div class="container">
+
+        <h1>OTP & Password Generator</h1>
+
+        <!-- OTP SECTION -->
+
+        <div class="card">
+
+            <h2>OTP Generator</h2>
+
+            <div class="otp-options">
+
+                <label>
+                    OTP Length
+                </label>
+
+                <select id="otpLength">
+
+                    <option value="4">4 Digits</option>
+
+                    <option value="6" selected>6 Digits</option>
+
+                    <option value="8">8 Digits</option>
+
+                </select>
+
+            </div>
+
+            <input
+                type="text"
+                id="otp"
+                readonly
+                placeholder="Generated OTP">
+
+            <div class="buttons">
+
+                <button id="generateOtp">
+                    Generate OTP
+                </button>
+
+                <button id="copyOtp">
+                    Copy
+                </button>
+
+            </div>
+
+            <p>
+
+                Expires In
+
+                <span id="timer">
+                    30
+                </span>
+
+                sec
+
+            </p>
+
+            <button id="clearOtpHistory">
+
+                Clear OTP History
+
+            </button>
+
+            <ul id="otpHistory">
+
+            </ul>
+
+        </div>
+
+        <!-- PASSWORD SECTION -->
+
+        <div class="card">
+
+            <h2>Password Generator</h2>
+
+            <label>
+
+                Password Length
+
+            </label>
+
+            <input
+                type="range"
+                min="6"
+                max="32"
+                value="12"
+                id="length">
+
+            <span id="lengthValue">
+                12
+            </span>
+
+            <div class="options">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="uppercase"
+                        checked>
+
+                    Uppercase
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="lowercase"
+                        checked>
+
+                    Lowercase
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="numbers"
+                        checked>
+
+                    Numbers
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="symbols"
+                        checked>
+
+                    Symbols
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="exclude">
+
+                    Exclude Similar Characters
+
+                </label>
+
+            </div>
+
+            <input
+                type="text"
+                id="password"
+                readonly
+                placeholder="Generated Password">
+
+            <div class="buttons">
+
+                <button id="generatePassword">
+
+                    Generate Password
+
+                </button>
+
+                <button id="copyPassword">
+
+                    Copy
+
+                </button>
+
+                <button id="downloadPassword">
+
+                    Download
+
+                </button>
+
+            </div>
+
+            <div class="strength">
+
+                <div id="strengthBar"></div>
+
+            </div>
+
+            <p id="strengthText">
+
+                Strength :
+
+            </p>
+
+            <button id="clearPasswordHistory">
+
+                Clear Password History
+
+            </button>
+
+            <ul id="passwordHistory">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div id="toast">
+
+        Copied Successfully
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
